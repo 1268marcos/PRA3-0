@@ -1,7 +1,15 @@
-public class  lista de brinquedos {
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 
-public toy() {
-}
+@Entity(tableName = "phrases")
+
+
+
+public class Toy {
+
 
 @PrimaryKey(autoGenerate = true)
     @NonNull
@@ -10,9 +18,11 @@ public toy() {
     
     @Nullable
     @ColumnInfo(name = "toyName")
-    private String mName
+    private String mName;
     
-    public toy(@Nullable String name, String Nickname,  int StateOfUse, String CreationDate) {
+    private String mNickname;
+    
+    public Toy(@Nullable String name, String nickname,  int stateOfUse, String creationDate) {
          mName = name;
          mNickname = nickname;
          mStateOfUse = stateOfUse;
@@ -60,5 +70,5 @@ public toy() {
      }
      
      private int mStateOfUse;
-     priavte String mCreationDate;
+     private String mCreationDate;
      }
